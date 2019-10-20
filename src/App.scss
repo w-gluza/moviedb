@@ -4,14 +4,13 @@
 :root {
   --color-primary: #43c6ac;
   --color-secondary: #c6435d;
-  --color-heading: #43c6ac;
   --color-paragraph: #2c3e50;
   --color-background: #fafafa;
-  --color-black: #444444;
+  // --color-black: #444444;
 
   --font-size-small: 1.2rem;
   --font-size-regular: 1.4rem;
-  --font-size-large: 1.8rem;
+  --font-size-large: 2rem;
 
   --font-weight-light: 300;
   --font-weight-regular: 400;
@@ -59,9 +58,12 @@ a:active {
 /* ------------------------------------- */
 
 body {
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-light);
   background-color: var(--color-background);
-  color: var(--color-blue-dark);
+  color: var(--color-paragraph);
+  line-height: var(--line-height-regular);
+  letter-spacing: var(--letter-spacing-regular);
+  font-size: var(--font-size-regular);
 }
 
 h1, h2 {
@@ -71,13 +73,8 @@ h1, h2 {
   letter-spacing: var(--letter-spacing-regular);
   color: var(--color-black);
 }
-
-p {
-  font-size: var(--font-size-regular);
-  font-weight: var(--font-weight-light);
-  line-height: var(--line-height-regular);
-  letter-spacing: var(--letter-spacing-regular);
-  color: var(--color-paragraph);
+h1{
+  padding: 2rem 0rem;
 }
 
 .main {
@@ -89,5 +86,28 @@ p {
   gap: 4rem;
 }
 .img {
-  width: 100%
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.article {
+  background-color: white;
+  border-radius: 10px;
+  width: 35rem;
+  min-height: 40rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.description {
+  padding: 2rem 3rem;
+}
+.voting {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ padding: 1rem 0rem;
+ align-items: end;
+ color:#43c6ac;
+ font-size: 1.4rem;
+}
+.vote-average{
+  justify-self: end
 }

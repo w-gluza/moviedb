@@ -11,19 +11,23 @@ function App() {
   const imgWidth = "w500";
   return (
     <>
-      <header>
-        <h1>Movie Database</h1>
-      </header>
       {loading ? (
         'Loading...'
       ) : (
           <main className="main">
+            <h1>Most popular movies right now!</h1>
             <section className="section">
-              {results.map(({ id, original_title, poster_path, overview }) => (
-                <article>
-                  <h2 key={id} id={id}>{original_title}</h2>
+              {results.map(({ id, original_title, poster_path, overview, popularity, vote_average }) => (
+                <article className="article" key={id}>
                   <img className="img" src={`${baseUrl}${imgWidth}` + poster_path} alt={original_title}></img>
-                  <p>{overview}</p>
+                  <section className="description">
+                    <h2 key={id} id={id}>{original_title}</h2>
+                    <div className="voting">
+                      <p>Seen by: {popularity}</p>
+                      <p className="vote-average">&#9734;{vote_average}</p>
+                    </div>
+                    <p>{overview}</p>
+                  </section>
                 </article>
               ))}
             </section>

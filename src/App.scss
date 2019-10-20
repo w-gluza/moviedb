@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+/* CSS VARIABLES*/
+:root {
+  --color-primary: #43c6ac;
+  --color-secondary: #c6435d;
+  --color-heading: #43c6ac;
+  --color-paragraph: #2c3e50;
+  --color-background: #fafafa;
+  --color-black: #444444;
+
+  --font-size-small: 1.2rem;
+  --font-size-regular: 1.4rem;
+  --font-size-large: 1.8rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --line-height-small: 1.2;
+  --line-height-regular: 1.5;
+  --line-height-large: 2;
+
+  --letter-spacing-small: 0.1em;
+  --letter-spacing-regular: 0.15em;
+  --letter-spacing-large: 0.2em;
+}
+
+/* -------- SIMPLE RESET ------------- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  background-color: transparent;
+  font-family: 'Lato', Helvetica, Arial, Verdana, Tahoma;
+}
+
+html {
+  /* This define what 1rem is */
+  /* 10px/16pc = 62,5% --> 1rem = 10px; */
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+}
+
+button,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  cursor: pointer;
+}
+/* ------------------------------------- */
+
+body {
+  font-weight: var(--font-weight-regular);
+  background-color: var(--color-background);
+  color: var(--color-blue-dark);
+}
+
+h1, h2 {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-regular);
+  letter-spacing: var(--letter-spacing-regular);
+  color: var(--color-black);
+}
+
+p {
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-regular);
+  letter-spacing: var(--letter-spacing-regular);
+  color: var(--color-paragraph);
+}
+
+.main {
+  padding: 0 5%;
+}
+.section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+.img {
+  width: 100%
+}
